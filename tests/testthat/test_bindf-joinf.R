@@ -30,12 +30,28 @@ test_that( "works as expected", {
     expect_equal( levels( bind1$factor2 )[ bind1$factor2], c( 'high', 'medium', 'low', 'low', 'medium', 'high' ) )
     expect_equal( levels( bind1$factor1 )[ bind1$factor1], c( 'a', 'b', 'c', 'd', 'e', 'f' ) )
     
+  # bind list 
+
+    bind1 = bindf( list(df1, df2) )
+    expect_equal( levels( bind1$factor1 ), c( 'a', 'b', 'c', 'd', 'e', 'f' ) )
+    expect_equal( levels( bind1$factor2 ), c( 'high', 'low', 'medium' ) )
+    expect_equal( levels( bind1$factor2 )[ bind1$factor2], c( 'high', 'medium', 'low', 'low', 'medium', 'high' ) )
+    expect_equal( levels( bind1$factor1 )[ bind1$factor1], c( 'a', 'b', 'c', 'd', 'e', 'f' ) )
+    
+  # bind with NULL
+
+    bind1 = bindf( df1, NULL )
+    expect_equal( bind1, df1 )
+    
   # Left join
     
     ljoin1 = ljoinf( df1, df2, by = 'factor.join', sort.levels = FALSE )
     expect_equal( levels( ljoin1$factor1.x ), c( 'a', 'b', 'c' ) )
     expect_equal( levels( ljoin1$factor.join ), c( '0349038u093843', '304359867893753', '3409783509735', '32532532536', '32534745876' ) )
-    expect_equal( levels( ljoin1$factor.join )[ ljoin1$factor.join], levels( df1$factor.join)[ df1$factor.join ]  )
+    expect_equal( 
+      levels( ljoin1$factor.join )[ ljoin1$factor.join], 
+      levels( df1$factor.join)[ df1$factor.join ]  
+    )
     expect_equal( levels( ljoin1$factor1.y )[ ljoin1$factor1.y ], c( '(Missing)', 'e', '(Missing)' ) )
     
   # Left join keep NA
@@ -49,13 +65,7 @@ test_that( "works as expected", {
     expect_equal( levels( ijoin1$factor.join ), '304359867893753' )
     expect_equal( levels( ijoin1$factor.join )[ ijoin1$factor.join], '304359867893753' )
     
-  # Right Join
-    
-    rjoin1 = rjoinf( df1, df2, by = 'factor.join', sort.levels = FALSE, restrict.levels = TRUE )
-    expect_equal( levels( rjoin1$factor1.x ), c( 'a', 'b', 'c', '(Missing)' ) )
-    expect_equal( levels( rjoin1$factor.join ), c( '304359867893753', '32532532536', '32534745876' ) )
-    expect_equal( levels( rjoin1$factor.join )[ rjoin1$factor.join], levels( df2$factor.join)[ df2$factor.join ] )
-    expect_equal( levels( rjoin1$factor1.x )[ rjoin1$factor1.x ], c( '(Missing)', 'b', '(Missing)' ) )
+  # Right Join has been removed. Left join should be used instead.
     
   # Full join
     
@@ -103,3 +113,4 @@ test_that( "works as expected", {
     
 
 })
+    

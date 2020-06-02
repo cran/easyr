@@ -78,7 +78,7 @@ Built, shared, and managed by Oliver Wyman Actuarial Consulting.
 * **tonum**, **todate**, and **tobool** convert character vectors to numbers, dates, and logicals. R has functions that attempt this, but none that worked consistently for us. These functions handle many more incoming data formats.
 * **read.any** automatically selects the best read function for you, and sets correct variable types on incoming data so you don't have to. Without easyr, R requires a different function for each file type.
 * **jrepl** (join and replace) joins a mapping to add a column or replaces values. This usually takes multiple operations but jrepl combines it to one.
-* **dict** returns information about a dataset's columns. fldict does the same for a folder of datasets.
+* **dict** returns information about a dataset's columns. It goes further than the str() function by flexibly determining variable types, counting unique and missing values, returning most and least common values, min/max, mode/median/mean, and more. fldict does the same for a folder of datasets.
 * **eq** R users will understand that NAs often break equality checks. This check doesn’t mind them.
 * **fmat** converts dates and numbers to pretty strings in a simpler way than the format function.
 * *Check out the detailed list of functions below for more.*
@@ -122,7 +122,7 @@ Common operations shortened for elegance, simplicity, and speed.
 | Name                       | Description                                                  |
 | -------------------------- | ------------------------------------------------------------ |
 | cc                         | Shorthand paste0/paste function to make typing these common function easier. Intuitively understands how to combine various-length inputs. |
-|coalf| dplyr function "coalesce" but handles factors appropriately. Checks each argument vector starting with the first until a non-null value is found.|
+|coalf| similar to dplyr function "coalesce" but handles factors appropriately. Checks each argument vector starting with the first until a non-null value is found.|
 | crun                       | Concatenate arguments and run them as a command. Shorthand for eval( parse( text = paste0( ... ) ) ). Consider also using base::get() which can be used to get an object from a string, but only if it already exists. |
 | ddiff                      | Date difference function plus shorthand mdiff, qdiff, ydiff. |
 | eq                         | Vectorized flexible equality comparison which considers NAs as a value. Returns TRUE if both values are NA, and FALSE when only one is NA. |
@@ -160,16 +160,16 @@ Help with reading and manipulating data.
 | Name     | Description                                                  |
 | -------- | ------------------------------------------------------------ |
 | binbyvol | Bins a numerical column according to another numerical column's volume. |
-| bindf    | dplyr's bind_rows doesn't work well when the data frame has factors. This function handles factors before applying bind rows. |
+| bindf    | dplyr's bind_rows doesn't work well when the data frame has factors. This function handles factors before binding rows. |
 | dict     | Get information about a Data Frame or Data Table. Use getinfo to explore a single column instead. |
 | drows    | Pull rows with a duplicated value.                           |
 | getbetterint | Takes bucket names of binned values such as [1e3,2e3) or [0.1234567, 0.2) and formats the values nicely into values such as 1,000-2,000 or 0.12-0.20|
 | fldict | Data dictionary for all data in a folder.|
 | getinfo | Get information about a Column in a Data Frame or Data Table. Use getdatadict to explore all columns in a dataset instead.|
 | namesx | Get column names that match a pattern.|
-| ijoinf | dplyr's joins doesn't work well when the data frame has factors. This function handles factors before applying dplyr::inner_join. Also availalbe are ljoinf, rjoinf for left and right join.|
+| ijoinf | dplyr's joins doesn't work well when the data frame has factors. This function handles factors before applying inner join via match. Also availalbe are ljoinf, rjoinf for left and right join.|
 | jrepl | Join and replace. Joins to another dataset and replaces matched values on a given column. Good for quickly grabbing values from another dataset to fill in or replace.|
-|read.any|Flexible read function to handle many types of files, data types, etc. Reduces downstream errors from read issues. Currently handles CSV, TSV, DBF, RDS, XLS (incl. when formatted as HTML), and XLSX. |
+|read.any|Flexible read function to handle many types of files, data types, etc. Reduces downstream errors from read issues. Currently handles CSV, TSV, DBF, RDS, XLS (incl. when formatted as HTML), XLSX, and PDF. |
 | sch | Search a data frame or vector. Attempts to replicate Excel search but with regex. |
 | short_dollars|	Converts numeric plot axis dollars and attaches K and divides by 1000.|
 | short_nums| Shortens axis numbering to thousands or millions and adds.|

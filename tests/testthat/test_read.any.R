@@ -62,7 +62,6 @@ test_that( 'Headers found using field_name_map, read column to row names', {
 })
 
 test_that( 'Single-column data reads properly', {
-  
   expect_equal(
     colnames( read.any( test_file( 'one-column-test.csv' ) ) ),
     'data' 
@@ -114,4 +113,16 @@ test_that( 'times read in properly', {
     c( 'date' = 'POSIXct', 'time' = 'POSIXct' )
   )
   
+})
+
+test_that( 'PDF read', {
+  expect_equal(
+    read.any( test_file( 'test.pdf' ) ),
+    data.frame( line=c( 
+      'headerinfo 1',
+      'headerinfo 2',
+      'row1, row1',
+      'row2, row2'
+    ), stringsAsFactors=FALSE)
+  )  
 })

@@ -4,27 +4,18 @@
 \alias{validate.equal}
 \title{Validate Equal}
 \usage{
-validate.equal(
-  df1,
-  df2,
-  id.column = NULL,
-  regex.remove = "[^A-z0-9.+\\\\/,-]",
-  do.set.NA = TRUE,
-  nastrings = easyr::nastrings,
-  match.round.to.digits = 4,
-  do.all.columns.before.err = FALSE,
-  check.column.order = FALSE,
-  sort.by.id = TRUE,
-  acceptable.pct.rows.diff = 0,
-  acceptable.pct.vals.diff = 0,
-  return.summary = FALSE,
-  verbose = TRUE
-)
+validate.equal(df1, df2, id.column = NULL,
+  regex.remove = "[^A-z0-9.+\\\\/,-]", do.set.NA = TRUE,
+  nastrings = easyr::nastrings, match.round.to.digits = 4,
+  do.all.columns.before.err = FALSE, check.column.order = FALSE,
+  sort.by.id = TRUE, acceptable.pct.rows.diff = 0,
+  acceptable.pct.vals.diff = 0, return.summary = FALSE,
+  verbose = TRUE)
 }
 \arguments{
-\item{df1}{First data frame or tibble to compare.}
+\item{df1}{First data frame  to compare.}
 
-\item{df2}{Second data frame or tibble to compare.}
+\item{df2}{Second data frame to compare.}
 
 \item{id.column}{If available, a column to use as an ID. Helpful in various checks and output.}
 
