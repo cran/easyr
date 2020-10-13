@@ -1,4 +1,4 @@
-a49eb63d28ddf8a2ae891f51c2f77452 *DESCRIPTION
+fafe7a655a24571ed7e911f77ca7958a *DESCRIPTION
 94e29a14396d00877028159bf252d82c *NAMESPACE
 53f0e261bc952ac54d0f62ad412420b1 *NEWS
 1a1c4190b2cc0c35a3257cbb549bff23 *R/astext.R
@@ -19,7 +19,7 @@ e5f205ac66d414aa2387aba6388a7ec8 *R/dict.R
 a32a5c9568946b32e187e630f392113f *R/drows.R
 315ee9958c667711d10af05a929e55ff *R/ecopy.R
 b679dc5b6fe83e3496e6320984cb9119 *R/eq.R
-4d9b30c67bd8abe3996ee21afe84a93f *R/fldict.R
+6f35c3c46dbd2afbe3c050521d83d816 *R/fldict.R
 6837f5e24c17f966469503fa95892d79 *R/fmat.R
 00ceda4b0e01ca587386f656500285de *R/getbetterint.R
 5bc437a0e29a1352aab26343f839b880 *R/getinfo.R
@@ -33,7 +33,7 @@ eedb327902209c2fe63bf8073311f3ce *R/likedate.R
 4d3bfc332a322b9a6d604e13d4335845 *R/nanull.R
 f2c4a44542a07467302c383a50514a9a *R/notin.R
 6cc188a39a2533c951ce9d8f92c6513f *R/pad0.R
-3dec1c67942033dbdc93137454aa655c *R/read.any.R
+51700ba46ae4cb2ce0b017ec97753657 *R/read.any.R
 7a9ed01ed29efc44cf3cf55042d83bc5 *R/read.txt.R
 895b0b8a50a10e0ab1329c4614fcfac5 *R/runfolder.R
 0943d80fc7bfe0fa4f46b5fdf9a93e4b *R/sch.R
@@ -48,15 +48,16 @@ cf61d966ee0240ac1939514e47b60c53 *R/tcmsg.R
 1f2f038c7b0857ad486edc9396b50f8a *R/todate.R
 81676a933ae0c7f8c38bd84454c0c1d6 *R/tonum.R
 7099a5cb8b3a3c2ea80f99fef5c19ca7 *R/totype.R
-530e70e8f7dc332399828523bf150fa6 *R/usepkg.R
+e00199fd7a42d49db65ecadd7e9eab69 *R/usepkg.R
 fbafe3c53f0b612b39c866dd70aec8e8 *R/utils.R
 cf2fb9e5bc4ba4621050e5b037e036e0 *R/validateequal.R
 ac38df4e3ef7cf914d8e55c2a115183d *R/w.R
 0854836ce67f738c0c5ca8256ab8762a *R/xldate.R
 f34cebcea403d3046459c13e74b884e6 *README.md
-bfd03eb55806566676abe5896aad83e5 *data/cblind.rda
-3dafc69207b526f1ca9fe5fb3e2a9ff7 *data/nastrings.rda
+dbad7413810e2f75fe58bfb0ead878b3 *data/cblind.R
+ff0ae0c6392f682fae9151d263a42a2e *data/nastrings.R
 be379d4261bee35dd0d5145ac299152f *data/states.rdata
+7ff50ddd1ca96ef87f876fe49d0a693c *inst/extdata/date-time.csv
 2576245e18707924d0a524ba92fba8a1 *man/astext.Rd
 0897d3bf45620310cdbc465ce2a5a3b1 *man/atype.Rd
 105de4f8ac10880ea3d0347cbd3ac216 *man/begin.Rd
@@ -68,7 +69,7 @@ bb0faf771556ad7776aba16e6fc02375 *man/binbyvol.Rd
 3b4c0df2048436295661123bf7da747b *man/cc.Rd
 1ebff86c893da4ad04c32674e20e02e6 *man/char2fac.Rd
 c60cf26ba4e481a61a6be7140dd051ae *man/charnum.Rd
-9c006d55340f7843432c419229a70e12 *man/checkeq.Rd
+67b71fe3f7ddeae64a3d2ea88c920fe1 *man/checkeq.Rd
 e89bb184f10d3afa686d9db0ea193385 *man/clear.cache.Rd
 f6611ee657d802111330c784f7a3b49f *man/coalf.Rd
 4bfee841e8dc86603d94a40eeff90fb0 *man/crun.Rd
@@ -79,7 +80,7 @@ c7c19988f6bc1a24c2c282908a345ddb *man/drows.Rd
 ccda50394aceb259345a945523d9fd43 *man/eq.Rd
 7be4c883d548e63b9bd03f0f68182925 *man/fac2char.Rd
 57c86cd47a30e06dbb1134caad24013c *man/fjoinf.Rd
-28039ae5397b64dee81dbed162fbce8c *man/fldict.Rd
+7b13835462a280b66862d63cecb26faa *man/fldict.Rd
 b666048543e20ecad1d326d9c6cbde48 *man/fmat.Rd
 98dd398dd7d12919adab24c8dce9bc98 *man/getbetterint.Rd
 a0604b1f6bd4d818aa7fa3cbd1e45e9e *man/getinfo.Rd
@@ -109,7 +110,7 @@ c2f9737d8e9f08ce3d68eabfbe759bdb *man/nastrings.Rd
 9f5d4dce3fddb31c36df6374fc655956 *man/pad0.Rd
 1b510861e4d7a3684e9eb2c7a8332fbe *man/qdiff.Rd
 8b078fc35869755252ff96ee82009dc0 *man/rany_fixColNames.Rd
-8901e5c86a4a21e73f412ad6b241adba *man/read.any.Rd
+c95a5dc2523f9c7b941de14d205e3595 *man/read.any.Rd
 94c026724716388432ee965c3aa9a7e6 *man/read.txt.Rd
 92c100c3eee4874fa7dd1129309249e9 *man/right.Rd
 e83beb55f729cf4df7834bb153f68334 *man/runfolder.Rd
@@ -127,7 +128,7 @@ c87db4a508cfe7233d094c0e864bd8ac *man/tcwarn.Rd
 0457b347c2f60150e5049833439d39ea *man/tochar.Rd
 f76220a45cc458efca1f5a6ff0a7ad6d *man/todate.Rd
 ac18ed1da164154bbbcb0a5f4bdbf072 *man/tonum.Rd
-255be1d927ce09832fb5cf1525bfccfe *man/usepkg.Rd
+d01bfa5aaeff702b9c88d86edcc855fa *man/usepkg.Rd
 058acad004a98a0bf11274f945cc33d9 *man/validate.equal.Rd
 e569d05039534810ba08b751bf864e68 *man/w.Rd
 fdf7a84f433edd6b36c1c29d5eac4519 *man/xldate.Rd
@@ -151,7 +152,7 @@ d8f0b1baebd1aaca4c0aa57adf4746e0 *tests/testthat/test_atype.R
 20a8c0c147775f153901d4817e88ed2c *tests/testthat/test_begin.R
 eef9075a07ade0a3e3589d43a4cdfe75 *tests/testthat/test_binbyvol.R
 3ddb1688cde6560c4d42b4a9924cd428 *tests/testthat/test_bindf-joinf.R
-63e0c07875fc17abe22293ed0f2ddba8 *tests/testthat/test_cache.R
+088d0c870ffb5b6bddb8dba4618127b1 *tests/testthat/test_cache.R
 3f49062d8c85403a4a6e4f65d1d1d318 *tests/testthat/test_cc.R
 1102940577f5286d81b79f2d6aabe263 *tests/testthat/test_char2fac.R
 35127ebf03c751df433dad9fd982e937 *tests/testthat/test_charnum.R
@@ -178,7 +179,7 @@ d1ec97162477db2c1a5efb6bac147219 *tests/testthat/test_namesx.R
 67b64329d854e72316baa9f5b60a9de6 *tests/testthat/test_nanull.R
 a0cfc294f5212ac75fd84e6a2b168d28 *tests/testthat/test_notin.R
 f64b2fcfc2001bf464a041da943f5780 *tests/testthat/test_pad0.R
-54433a87956d84cb73bb478478443d79 *tests/testthat/test_read.any.R
+8a02cccf243f664caa536373e877e823 *tests/testthat/test_read.any.R
 250a868cbd1233a0b4e73e55171a8a8c *tests/testthat/test_read.txt.R
 dc532b8c3d18f2ca8abcbb1b6161f004 *tests/testthat/test_runfolder.R
 d96ca8a66a510279187fa06c8e1fa50d *tests/testthat/test_sch.R
@@ -192,7 +193,7 @@ eaf7f84b6c50f4da5507b8482d6012b0 *tests/testthat/test_tcol.R
 7ff25a676221e82a151aa893c0fbd975 *tests/testthat/test_tobool.R
 6b33241fa41defb94ffe9425710d999d *tests/testthat/test_todate.R
 19cbaf8473167e7805cd9ea1ea7e0e4d *tests/testthat/test_tonum.R
-32c54f3df3b2301735f7890524e45490 *tests/testthat/test_usepkg.R
+99b2eeedc6b33ff91764ffa9af73634a *tests/testthat/test_usepkg.R
 aa7f7fc0c737a7ff48ef85d3c06cfeef *tests/testthat/test_validateequal.R
 678ede9ec2c8e4d9f4b49bfbc2f4e692 *tests/testthat/test_w.R
 2c0557f07aafe208870873bb4814347c *tests/testthat/test_xldate.R

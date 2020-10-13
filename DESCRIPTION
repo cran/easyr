@@ -1,7 +1,7 @@
 Package: easyr
 Type: Package
 Title: Helpful Functions from Oliver Wyman Actuarial Consulting
-Version: 0.5-0
+Version: 0.5-2
 Authors@R: c(
         person( "Oliver Wyman", "Actuarial Consulting", email = "rajesh.sahasrabuddhe@oliverwyman.com", role = c("aut", "cph") ),
         person( "Bryce", "Chamberlain", email = "bryce.chamberlain@oliverwyman.com", role = c("aut", "cre") ),
@@ -23,10 +23,10 @@ Imports: data.table, digest, dplyr, foreign, glue, Hmisc, lubridate,
 RoxygenNote: 6.1.1
 Suggests: pdftools, qs, rstudioapi, testthat
 NeedsCompilation: no
-Packaged: 2020-08-07 19:10:10 UTC; bryce.chamberlain
+Packaged: 2020-10-09 15:24:51 UTC; bryce.chamberlain
 Author: Oliver Wyman Actuarial Consulting [aut, cph],
   Bryce Chamberlain [aut, cre],
   Scott Sobel [ctb],
   Rajesh Sahasrabuddhe [ctb]
 Repository: CRAN
-Date/Publication: 2020-08-10 11:40:02 UTC
+Date/Publication: 2020-10-13 12:40:02 UTC
