@@ -184,7 +184,7 @@ read.any <- function(
     }
     
     # For excel, use our custom rx function (in this file, see below). rx is not exported to prevent it's being used instead of read.any.
-    isexcel = grepl( '[.]xls[xm]?$', filename, ignore.case = TRUE )
+    isexcel = grepl( '[.]xls[xmb]?$', filename, ignore.case = TRUE )
     if( isexcel ) x <- rx(
       filename = filename, sheet = sheet, first_column_name = first_column_name,nrows = nrows, verbose = verbose
     )
@@ -354,7 +354,7 @@ read.any <- function(
   if( !is.na( row.names.column ) ){
     
     # Validated.
-    if( class(row.names.column) != 'character' || length( row.names.column ) != 1 ) stop( '[row.names] argument must be a single character.')
+    if( !methods::is(row.names.column, 'character') || length( row.names.column ) != 1 ) stop( '[row.names] argument must be a single character.')
     if( any( duplicated( x[[ row.names.column ]] ) ) ) stop( '[row.names] column must have unique values.' )
     
     # Apply rownames and remove the column.
@@ -402,8 +402,15 @@ rx <- function( filename, sheet, first_column_name, nrows, verbose ){
   # Setup.
   x = NULL # this is here for the function to latch onto during <<-. Without it, you sometimes get a leftover "x" after running the read.
 
+  # Handle xlsb
+  if(grepl('[.]xlsb$', filename, ignore.case = T)){
+
+    if(!isval(sheet)) sheet = 1 # read_xlsb errors out if sheet is NULL.
+    x <- readxlsb::read_xlsb( path = filename, sheet = sheet )
+    if(isval(nrows)) x = utils::head(x, nrows) # read_xlsb does not have an nrows argument. 
+  
   # Handle xlsx
-  if( grepl( '[.]xlsx$', filename, ignore.case = T ) ) {
+  } else if( grepl( '[.]xlsx$', filename, ignore.case = T ) ) {
       
     # Read in as text, we'll convert datatypes later. Data type conversion in a read-excel function often runs into errors.
     # We'd like more control over data conversion to enhance it.
@@ -422,7 +429,7 @@ rx <- function( filename, sheet, first_column_name, nrows, verbose ){
     if( grepl( '[.]xls$', filename, ignore.case = TRUE ) ){
       
       # This method requires sheet index number, not a sheet name, so return an error if applicable.
-      if( !is.numeric(sheet) ) stop('ERROR: Not able to file [',filename,'] sheet [',sheet,']. Try using a sheet index/number instead of the name for argument [sheet], which will allow an XML-based read attempt.')
+      if( !is.numeric(sheet) ) stop('ERROR: Not able to find file [',filename,'] sheet [',sheet,']. Try using a sheet index/number instead of the name for argument [sheet], which will allow an XML-based read attempt.')
       
       # Attemp the html-format read via XML.
       if( verbose ) cat( 'Reading as XML/HTML \n' )
