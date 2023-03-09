@@ -61,7 +61,7 @@ jrepl = function( x, y, by, replace.cols, na.only = FALSE, only.rows = NULL, ver
   for( i in 1:length(replace.cols) ) if( replace.cols[[i]] %ni% colnames(x) ){
     
       x[[ replace.cols[[i]] ]] <- NA
-      yclass = class( y[[ y.replace[[i]] ]] )
+      yclass = firstClass( y[[ y.replace[[i]] ]] )
       
       # some class conversions require the "as" function:
       if( yclass == 'factor' ){
@@ -155,7 +155,7 @@ jrepl = function( x, y, by, replace.cols, na.only = FALSE, only.rows = NULL, ver
     # Check for duplication.
     urows = unique( x$orig.x.row )
     if( nrow(x) != length(urows) || any( x$orig.x.row != urows ) ) stop( 
-      'jrepl error: rows were duplicated or elimitated in the join. Please fix the data such that the join does not create duplicates. Error E510 jrepl.' 
+      'jrepl error: rows were duplicated or eliminated in the join. Please fix the data such that the join does not create duplicates. Error E510 jrepl.' 
     )
     rm(urows)
     

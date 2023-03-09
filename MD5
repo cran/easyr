@@ -1,4 +1,4 @@
-72168dbaa90523b4ec52b12d49a18902 *DESCRIPTION
+e57c0b96fcb8f6ca98d96775a0517281 *DESCRIPTION
 94e29a14396d00877028159bf252d82c *NAMESPACE
 c29fa62f5c71f74258fac9a1306b5bb3 *R/astext.R
 f2c3c2c793a08ec35850be4955d2acaf *R/atype.R
@@ -23,16 +23,16 @@ c83050b860bac594e62444cb8ea9a039 *R/eq.R
 00ceda4b0e01ca587386f656500285de *R/getbetterint.R
 b13b606df8af9df1198055e4f8f68c7b *R/getinfo.R
 174a2fc89d684125d459e2e25a2cd3b0 *R/gr.R
-7a0d36ddee652fc3f28b8478cbd3219f *R/hashfiles.R
+b756869bc833efd0a07b9a0428c6bbe1 *R/hashfiles.R
 ec3a1142eae83caf420a602d184bc533 *R/isval.R
-ba09f9984658783730771796e020bf64 *R/jrepl.R
+a00423cce26d34a2050c4fb98eb61421 *R/jrepl.R
 827d2e26ea818f6c0f9686a7cc09302a *R/left-right-mid.R
 eedb327902209c2fe63bf8073311f3ce *R/likedate.R
 2c7175b71593a11101ef7b6daf658798 *R/namesx.R
 4d3bfc332a322b9a6d604e13d4335845 *R/nanull.R
 f2c4a44542a07467302c383a50514a9a *R/notin.R
 6cc188a39a2533c951ce9d8f92c6513f *R/pad0.R
-a36df7b97a9aa8163770aad7b695e2d6 *R/read.any.R
+871d7cf30ec0327c77a1f36b595a1fa2 *R/read.any.R
 7a9ed01ed29efc44cf3cf55042d83bc5 *R/read.txt.R
 895b0b8a50a10e0ab1329c4614fcfac5 *R/runfolder.R
 cfa546819083faac901d2348e3f2997c *R/sch.R
@@ -52,8 +52,8 @@ e00199fd7a42d49db65ecadd7e9eab69 *R/usepkg.R
 cf2fb9e5bc4ba4621050e5b037e036e0 *R/validateequal.R
 ac38df4e3ef7cf914d8e55c2a115183d *R/w.R
 0854836ce67f738c0c5ca8256ab8762a *R/xldate.R
-f4bf84274fc13bce84a3299e8c9e794e *data/cblind.rda
-efe81e4ba274a0351dd494c0a5c70c50 *data/nastrings.rda
+4a92956c912d97caf744ca082ce53ad2 *data/cblind.rda
+407e84cc23597062015987e3faec6299 *data/nastrings.rda
 be379d4261bee35dd0d5145ac299152f *data/states.rdata
 7ff50ddd1ca96ef87f876fe49d0a693c *inst/extdata/date-time.csv
 2576245e18707924d0a524ba92fba8a1 *man/astext.Rd
@@ -162,7 +162,7 @@ e1918c4b06dc1cf5d7e46be6c66224c9 *tests/testthat/test_data.R
 6ca1de4d4f91b022eb11cd8649ce9a75 *tests/testthat/test_ddiff.R
 4e49e0bb78c6648e7bb6d2b0977a0eee *tests/testthat/test_dict.R
 a17b942cc9950c10054195c6134bef63 *tests/testthat/test_drows.R
-2fec85a11c119279a696581e61aa22be *tests/testthat/test_ecopy.R
+bcce708a8533873a79524ed813808c89 *tests/testthat/test_ecopy.R
 bdb04e553fc24f241b5ba4e8ffd60e3f *tests/testthat/test_eq.R
 aafb901cf1d036d53f4a7b3cf2563231 *tests/testthat/test_fldict.R
 3d8ecce46b652e885fd68833a3a06479 *tests/testthat/test_fmat.R
@@ -178,7 +178,7 @@ bb1d4898ba3d7273588be5cca3c91388 *tests/testthat/test_likedate.R
 10f423333131beee5d6c45e28045d56d *tests/testthat/test_nanull.R
 d9a9e02d92302218d249dfdd7a01b44f *tests/testthat/test_notin.R
 b913f9272a2c10ebf2c6c4f6d46e9dfa *tests/testthat/test_pad0.R
-f977158a69d2fb79a81859f628b7eeee *tests/testthat/test_read.any.R
+005e073aca33d46d09f9a9810fbb4dec *tests/testthat/test_read.any.R
 7260d2c325ecc6305dca74cdef7ca044 *tests/testthat/test_read.txt.R
 d4f9308506206ed3145f91a39f239cd0 *tests/testthat/test_runfolder.R
 0dc7c0c718373c7abfb9a89f4174b764 *tests/testthat/test_sch.R
